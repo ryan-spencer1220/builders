@@ -23,16 +23,6 @@ int Request::getSector() const
   return location;
 }
 
-void Request::setType(structure_type structure)
-{
-  this->structure = structure;
-}
-
-void Request::setSector(int location)
-{
-  this->location = location;
-}
-
 void Request::print() const
 {
   char str[20];
