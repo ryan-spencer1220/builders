@@ -1,13 +1,22 @@
+#pragma once
+
 #include "structuretype.h"
+#include <iostream>
+
+using namespace std;
 
 class Request
 {
 private:
-  int id;
-  structure_type structure;
   int location;
+  structure_type structure;
 
 public:
   Request();
-  Request(int id, structure_type structure, int location);
+  Request(int location, structure_type structure);
+  structure_type getType() const;
+  int getSector() const;
+  void setType(structure_type structure);
+  void setSector(int location);
+  void print() const;
 };

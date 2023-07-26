@@ -5,30 +5,31 @@
 
 using namespace std;
 
-void dumpStack(stack &s)
+void dumpStack(Stack &s)
 {
-    cout << "Dumping the stack" << endl;
-    while (!s.isEmpty())
-    {
-	const Request* result = s.pop();
-	cout << "Value: ";
-	result->print();
-    }
+  cout << "Dumping the stack" << endl;
+  while (!s.isEmpty())
+  {
+    const Request *result = s.peek();
+    s.pop();
+    cout << "Value: ";
+    result->print();
+  }
 }
 
 int main()
 {
-    stack* s = new stack(100);
-    Request e1(1,WIND);
-    Request e2(2,SOLAR);
-    Request e3(3,WATER);
-    const Request* ePtr;
+  Stack *s = new Stack();
+  Request e1(1, WIND);
+  Request e2(2, SOLAR);
+  Request e3(3, WATER);
+  const Request *ePtr;
 
-    s->push(e1);
-    dumpStack(*s);
-    s->push(e2);
-    s->push(e3);
-    dumpStack(*s);
+  s->push(e1);
+  dumpStack(*s);
+  s->push(e2);
+  s->push(e3);
+  dumpStack(*s);
 
-    delete s;
+  delete s;
 }

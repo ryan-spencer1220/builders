@@ -1,15 +1,41 @@
 #include "request.h"
+#include "structuretype.h"
 
 Request::Request()
 {
-  this->id = 0;
-  this->structure = UNK;
   this->location = 0;
+  this->structure = UNK;
 }
 
-Request::Request(int id, structure_type structure, int location)
+Request::Request(int location, structure_type structure)
 {
-  this->id = id;
-  this->structure = structure;
   this->location = location;
+  this->structure = structure;
+}
+
+structure_type Request::getType() const
+{
+  return structure;
+}
+
+int Request::getSector() const
+{
+  return location;
+}
+
+void Request::setType(structure_type structure)
+{
+  this->structure = structure;
+}
+
+void Request::setSector(int location)
+{
+  this->location = location;
+}
+
+void Request::print() const
+{
+  char str[20];
+  toString(structure, str);
+  cout << "Sector: " << location << " Structure: " << str << endl;
 }

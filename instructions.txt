@@ -393,7 +393,7 @@ Task 6: Implement Builder::addRequest() (2 hr)
     addRequest() method in your builder. You will need to add a LinkedList
     data member to the Builder class definition. You will implement addRequest
     by making appropriate calls to the add and remove methods in your
-    LinkedList. The addRequest() methd should print messages to the
+    LinkedList. The addRequest() method should print messages to the
     screen. Examine the output files to see the format and contents of those
     messages and implement your code to match that.
 

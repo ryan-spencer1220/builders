@@ -1,31 +1,32 @@
 #pragma once
-#include <cstring>
 #include <fstream>
 #include <iostream>
 
 #include "structuretype.h"
+#include "request.h"
 
 class LinkedList
 {
 private:
   struct Node
   {
-    int id;
-    structure_type structure;
-    int location;
+    Request request;
     Node *next;
   };
   Node *head;
   Node *tail;
-  int size;
+  int count;
 
 public:
   LinkedList();
   LinkedList(const LinkedList &other);
   ~LinkedList();
   void operator=(const LinkedList &other);
-  void addFront(Node *node);
-  void addBack(Node *node);
+  void insertFront(Request request);
+  void insertBack(Request request);
   void removeFront();
   void removeBack();
+  bool isEmpty() const;
+  void printList() const;
+  Node *getHead() const;
 };
