@@ -98,7 +98,7 @@ int main(int argc, char **argv)
           // simply call the addRequest() method on that builder.
 
           structure_type type = getFromString(typeStr);
-          builders[builderNum - 1].addRequest(sectorNum, type);
+          builders[builderNum - 1].addRequest(builderNum, sectorNum, type);
         }
       }
     }

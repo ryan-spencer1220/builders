@@ -10,9 +10,11 @@ void Stack::push(Request request)
   list.insertFront(request);
 }
 
-void Stack::pop()
+Request Stack::pop()
 {
+  Request request = list.getHead()->request;
   list.removeFront();
+  return request;
 }
 
 Request *Stack::peek()
@@ -23,4 +25,9 @@ Request *Stack::peek()
 bool Stack::isEmpty()
 {
   return list.isEmpty();
+}
+
+void Stack::printStack()
+{
+  list.printList();
 }

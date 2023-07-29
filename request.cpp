@@ -3,14 +3,21 @@
 
 Request::Request()
 {
+  this->builderNum = 0;
   this->location = 0;
   this->structure = UNK;
 }
 
-Request::Request(int location, structure_type structure)
+Request::Request(int builderNum, int location, structure_type structure)
 {
+  this->builderNum = builderNum;
   this->location = location;
   this->structure = structure;
+}
+
+int Request::getBuilderNum() const
+{
+  return builderNum;
 }
 
 structure_type Request::getType() const

@@ -22,6 +22,7 @@ public:
   LinkedList(const LinkedList &other);
   ~LinkedList();
   void operator=(const LinkedList &other);
+
   void insertFront(Request request);
   void insertBack(Request request);
   void removeFront();
@@ -29,4 +30,5 @@ public:
   bool isEmpty() const;
   void printList() const;
   Node *getHead() const;
+  Node *getTail() const;
 };

@@ -160,3 +160,8 @@ LinkedList::Node *LinkedList::getHead() const
 {
   return head;
 }
+
+LinkedList::Node *LinkedList::getTail() const
+{
+  return tail;
+}

@@ -8,7 +8,8 @@ private:
 public:
   Stack();
   void push(Request request);
-  void pop();
+  Request pop();
   Request *peek();
   bool isEmpty();
+  void printStack();
 };
